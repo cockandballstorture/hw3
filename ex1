@@ -1,5 +1,4 @@
 a = (input().split(","))
-w=0
 for i in range(len(a)):
     a[i] = float(a[i])
 w=a[0]
@@ -9,4 +8,3 @@ for i in range(len(a)-1):
     else:
         w = a[i+1]
 print(w)
-                
