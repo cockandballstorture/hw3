@@ -1,0 +1,23 @@
+a = (input().split(","))
+for i in range(len(a)):
+    a[i] = float(a[i])
+w=a[0]
+k=0
+for i in range(len(a)-1):
+    if w > a[i+1]:
+        w = w
+        k=k
+    else:
+        w = a[i+1]
+        k=i+1
+a.pop(k)
+w=a[0]
+k=0
+for i in range(len(a)-1):
+    if w > a[i+1]:
+        w = w
+        k=k
+    else:
+        w = a[i+1]
+        k=i+1
+print(w)
