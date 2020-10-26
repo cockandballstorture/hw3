@@ -1,21 +1,10 @@
-a=list(map(float,input().split(",")))
-w=a[0]
+a=list(map(float,input().split()))
 k=0
-for i in range(len(a)-1):
-    if w > a[i+1]:
-        w = w
-        k=k
-    else:
-        w = a[i+1]
-        k=i+1
-a.pop(k)
-w=a[0]
-k=0
-for i in range(len(a)-1):
-    if w > a[i+1]:
-        w = w
-        k=k
-    else:
-        w = a[i+1]
-        k=i+1
-print(w)
+for i in range(len(a)):
+    for j in range(len(a)-1-i):
+        if a[j]>a[j+1]:
+            a[j],a[j+1]=a[j+1],a[j]
+            o=True
+    k+=1
+    if not o : break
+print(a[i-1])
